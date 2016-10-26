@@ -54,7 +54,12 @@ main{
 
 	<header>header</header>
     <main class="clearfix">
-		<div class="container">container</div>
+		<div class="container">圣杯布局是指两边定宽，中间自适应的三栏布局。中间栏要放在前面以优先渲染。参考：圣杯布局原理。其流程为 
+1. 设置container的左右padding，用于预留左右边栏的空间。 
+2. container:after清除浮动。 
+3. 将中间栏放在最前优先渲染，设置浮动，设置宽度100%。 
+4. 左右两栏设置浮动，宽度。左侧边栏设置margin-left:-100%跑到左上角（覆盖主栏目），再设置position:relative,left:-200px（不覆盖主栏目）。 
+5. 右侧栏设置margin-left:-200px(自身宽度)，跑到右上角（覆盖主栏目）再设置position:relative,left:200px；（不覆盖主栏目）。</div>
 		<div class="aside-left">aside-left</div>
 		<div class="aside-right">aside-right</div>
     </main>
