@@ -59,7 +59,13 @@ main{
     <main class="clearfix">
 	    
 		<div class="container">
-			<div class="wrap">container</div>
+			<div class="wrap">双飞翼布局的原理<br/>
+
+主栏目放在最前优先渲染，设置宽度100%，左浮动。<br/>
+主栏目中再加一层div，设置margin-left,margin-right.用于放置侧边栏。<br/>
+container:after清除浮动。<br/>
+左右两栏设置浮动，宽度。左侧边栏设置margin-left:-100%跑到左上角。<br/>
+右侧栏设置margin-left:-200px(自身宽度)，跑到右上角。</div>
 		</div>
 	    
 		<div class="aside-left">aside-left</div>
